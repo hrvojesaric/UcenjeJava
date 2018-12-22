@@ -19,32 +19,28 @@ public class CikličkaTablica {
 		
 	    while(broj<=(m*n)){
 			for (int i = maxStup; i >= minStup; i--){
-				tablica[maxRed][i] = broj;
-				broj++;
+				tablica[maxRed][i] = broj++;
 				}
 			if(broj>(m*n)) {
-				continue;
+				break;
 			}
 			for (int i = maxRed-1; i >= minRed; i--) {
-				tablica[i][minStup] = broj;
-				broj++;
+				tablica[i][minStup] = broj++;
 				}
 			if(broj>(m*n)) {
-				continue;
+				break;
 			}
 			for (int i = minStup+1; i <= maxStup; i++){
-				tablica[minRed][i] = broj;
-				broj++;
+				tablica[minRed][i] = broj++;
 				}
 			if(broj>(m*n)) {
-				continue;
+				break;
 			}
 			for (int i = minRed+1; i <= maxRed-1; i++){
-				tablica[i][maxStup] = broj;
-				broj++;
+				tablica[i][maxStup] = broj++;
 				}
 			if(broj>(m*n)) {
-				continue;
+				break;
 			}
 			
 			minStup++;
