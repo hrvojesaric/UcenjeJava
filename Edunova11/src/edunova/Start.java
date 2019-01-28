@@ -127,6 +127,20 @@ public class Start {
 	}
 	
 	private void ispisiOsobuNajvecihPrimanja() {
+		BigDecimal maxprimanja = new BigDecimal(0.0);
+		for(int i=0;i<osobe.size();i++) {
+			
+			if(maxprimanja.compareTo(osobe.get(i).getPrimanje())  < 0) {
+				
+				maxprimanja = osobe.get(i).getPrimanje();
+			}
+		}
+		
+		for(int i=0;i<osobe.size();i++) {
+			if(maxprimanja.compareTo(osobe.get(i).getPrimanje())==0) {
+				System.out.println("Osoba s najvećim primanjima je "+osobe.get(i).getIme()+"  "+osobe.get(i).getPrezime());
+			}
+		}
 		
 	}
 
